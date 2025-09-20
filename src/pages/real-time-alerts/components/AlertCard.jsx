@@ -8,7 +8,8 @@ const AlertCard = ({ alert, onAcknowledge, onShare, onViewDetails }) => {
   const getSeverityColor = (severity) => {
     switch (severity) {
       case 'critical':
-        return 'bg-error/10 border-error text-error-foreground';
+        // Red border, white background, dark text
+        return 'bg-warning/10 border-warning text-warning-foreground';
       case 'high':
         return 'bg-warning/10 border-warning text-warning-foreground';
       case 'medium':
@@ -69,7 +70,7 @@ const AlertCard = ({ alert, onAcknowledge, onShare, onViewDetails }) => {
     <div className={`
       border-2 rounded-lg p-4 transition-smooth hover:shadow-soft
       ${getSeverityColor(alert?.severity)}
-      ${alert?.severity === 'critical' ? 'animate-alert-pulse' : ''}
+      ${alert?.severity === 'critical' ? '' : ''}
     `}>
       {/* Alert Header */}
       <div className="flex items-start justify-between mb-3">
@@ -78,7 +79,7 @@ const AlertCard = ({ alert, onAcknowledge, onShare, onViewDetails }) => {
             <Icon 
               name={getDisasterIcon(alert?.type)} 
               size={24} 
-              className={alert?.severity === 'critical' ? 'animate-pulse' : ''}
+              className={alert?.severity === 'critical' ? '' : ''}
             />
           </div>
           <div className="flex-1 min-w-0">
@@ -111,12 +112,12 @@ const AlertCard = ({ alert, onAcknowledge, onShare, onViewDetails }) => {
         </div>
         <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
           {!alert?.acknowledged && (
-            <div className="w-3 h-3 bg-current rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-current rounded-full"></div>
           )}
           <Icon 
             name={getSeverityIcon(alert?.severity)} 
             size={20}
-            className={alert?.severity === 'critical' ? 'animate-pulse' : ''}
+            className={alert?.severity === 'critical' ? '' : ''}
           />
         </div>
       </div>

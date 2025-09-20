@@ -190,7 +190,7 @@ const AdminDashboard = () => {
             <div className="p-6 border-b border-border">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center">
-                  <Icon name="Shield" size={24} color="var(--color-error)" />
+                  <Icon name="Shield" size={25} color="var(--color-error)" />
                 </div>
                 <div>
                   <h2 className="font-semibold text-card-foreground">Admin Dashboard</h2>
