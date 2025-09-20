@@ -42,7 +42,34 @@ const QuickAccessPanel = ({ recentModules = [], bookmarkedContent = [] }) => {
   };
 
   return (
+    <>
     <div className="space-y-6">
+      {/* Emergency Contacts Quick Access */}
+      <div className="bg-error/5 border border-error/20 rounded-lg shadow-soft p-6">
+        <h3 className="text-lg font-semibold text-error mb-4 flex items-center">
+          <Icon name="Phone" size={20} className="mr-2" />
+          Emergency Contacts
+        </h3>
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-card-foreground">National Emergency</span>
+            <span className="font-mono font-medium text-error">112</span>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-card-foreground">Fire Department</span>
+            <span className="font-mono font-medium text-error">101</span>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-card-foreground">Police</span>
+            <span className="font-mono font-medium text-error">100</span>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-card-foreground">Medical Emergency</span>
+            <span className="font-mono font-medium text-error">108</span>
+          </div>
+        </div>
+      </div>
+    </div>
       {/* Quick Actions */}
       <div className="bg-card border border-border rounded-lg shadow-soft p-6">
         <h3 className="text-lg font-semibold text-card-foreground mb-4 flex items-center">
@@ -146,32 +173,7 @@ const QuickAccessPanel = ({ recentModules = [], bookmarkedContent = [] }) => {
           </div>
         </div>
       </div>
-      {/* Emergency Contacts Quick Access */}
-      <div className="bg-error/5 border border-error/20 rounded-lg shadow-soft p-6">
-        <h3 className="text-lg font-semibold text-error mb-4 flex items-center">
-          <Icon name="Phone" size={20} className="mr-2" />
-          Emergency Contacts
-        </h3>
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-card-foreground">National Emergency</span>
-            <span className="font-mono font-medium text-error">112</span>
-          </div>
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-card-foreground">Fire Department</span>
-            <span className="font-mono font-medium text-error">101</span>
-          </div>
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-card-foreground">Police</span>
-            <span className="font-mono font-medium text-error">100</span>
-          </div>
-          <div className="flex items-center justify-between text-sm">
-            <span className="text-card-foreground">Medical Emergency</span>
-            <span className="font-mono font-medium text-error">108</span>
-          </div>
-        </div>
-      </div>
-    </div>
+      </>
   );
 };
 
