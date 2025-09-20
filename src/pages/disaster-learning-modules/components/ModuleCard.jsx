@@ -32,8 +32,12 @@ const ModuleCard = ({ module, userProgress = {} }) => {
   };
 
   const handleModuleClick = () => {
+  if (module.id === 'fire-safety') {
+    navigate('/disaster-learning-modules/fire-safety');
+  } else {
     navigate(`/disaster-learning-modules/${module.id}`);
-  };
+  }
+};
 
   return (
     <div className="bg-card border border-border rounded-lg shadow-soft hover:shadow-elevated transition-smooth overflow-hidden group">
