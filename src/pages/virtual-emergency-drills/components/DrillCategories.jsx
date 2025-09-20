@@ -78,7 +78,7 @@ const DrillCategories = ({
   };
 
   return (
-    <div className={space-y-4 ${className}}>
+    <div className={'space-y-4 ${className}'}>
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-card-foreground">Drill Categories</h3>
         <span className="text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ const DrillCategories = ({
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center space-x-3">
-                    <div className={w-10 h-10 rounded-lg flex items-center justify-center ${category?.bgColor}}>
+                    <div className={'w-10 h-10 rounded-lg flex items-center justify-center ${category?.bgColor}'}>
                       <Icon name={category?.icon} size={20} className={category?.color} />
                     </div>
                     <div>
@@ -136,7 +136,7 @@ const DrillCategories = ({
                         progressPercentage >= 100 ? 'bg-success' : 
                         progressPercentage >= 50 ? 'bg-primary' : 'bg-warning'
                       }`}
-                      style={{ width: ${progressPercentage}% }}
+                      style={{ width: '${progressPercentage}% '}}
                     />
                   </div>
                   <div className="text-xs text-muted-foreground">
