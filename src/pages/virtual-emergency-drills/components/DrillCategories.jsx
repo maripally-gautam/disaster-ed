@@ -1,6 +1,4 @@
 import React from 'react';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
 
 const DrillCategories = ({ 
   selectedCategory, 
@@ -8,6 +6,34 @@ const DrillCategories = ({
   userProgress = {},
   className = '' 
 }) => {
+  // This is a placeholder for your Icon and Button components.
+  // In a real application, you would import these from your component library.
+  const Icon = ({ name, size, className, color }) => {
+    // Placeholder logic for a simple icon.
+    // In a real app, this would render a proper icon component.
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} style={{ color: color }}>
+        <path d="M12 2L2 22h20L12 2z"></path>
+      </svg>
+    );
+  };
+
+  const Button = ({ variant, size, fullWidth, iconName, children }) => {
+    // Placeholder for a simple button with Tailwind classes.
+    const baseClasses = "rounded-lg font-medium transition-colors duration-200";
+    const sizeClasses = size === "sm" ? "px-3 py-2 text-sm" : "px-4 py-2 text-base";
+    const variantClasses = variant === "default" ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50";
+    const widthClasses = fullWidth ? "w-full" : "";
+    
+    return (
+      <button className={`${baseClasses} ${sizeClasses} ${variantClasses} ${widthClasses}`}>
+        {iconName && <Icon name={iconName} size={16} className="mr-2" />}
+        {children}
+      </button>
+    );
+  };
+
+
   const categories = [
     {
       id: 'all',
@@ -95,12 +121,12 @@ const DrillCategories = ({
             <div
               key={category?.id}
               className={`
-                bg-card border rounded-lg shadow-soft transition-smooth cursor-pointer hover:shadow-elevated
+                flex flex-col bg-card border rounded-lg shadow-soft transition-smooth cursor-pointer hover:shadow-elevated
                 ${isSelected ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/30'}
               `}
               onClick={() => onCategorySelect(category?.id)}
             >
-              <div className="p-4">
+              <div className="p-4 flex flex-col flex-grow">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center space-x-3">
@@ -119,8 +145,8 @@ const DrillCategories = ({
                   )}
                 </div>
 
-                {/* Description */}
-                <p className="text-sm text-muted-foreground mb-4">{category?.description}</p>
+                {/* Description - Made flex-grow to take up space consistently */}
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">{category?.description}</p>
 
                 {/* Progress */}
                 <div className="space-y-2">
