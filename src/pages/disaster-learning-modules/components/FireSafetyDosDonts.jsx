@@ -18,17 +18,17 @@ const FireSafetyDosDonts = () => (
         alt="Fire Safety Dos and Donts"
         style={{
           width: '100%',
-          maxWidth: 500,
+          maxWidth: 450,
           height: 'auto',
           borderRadius: 12,
           marginBottom: 32,
           boxShadow: '0 2px 12px rgba(0,0,0,0.10)',
         }}
       />
-      <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
+      <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 30, color: '#d32f2f' }}>
         Fire Safety: Do's & Don'ts
       </h2>
-      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 500 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 600 }}>
         <div style={{ textAlign: 'left', width: '47%' }}>
           <h3 style={{ color: "#388e3c", marginBottom: 16 }}>DO'S</h3>
           <ul style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 18, marginBottom: 0 }}>

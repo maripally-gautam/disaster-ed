@@ -34,7 +34,9 @@ const ModuleCard = ({ module, userProgress = {} }) => {
   const handleModuleClick = () => {
   if (module.id === 'fire-safety') {
     navigate('/disaster-learning-modules/fire-safety');
-  } else {
+  } else if (module.id === 'earthquake-safety'){    
+    navigate('/disaster-learning-modules/earthquake-safety');
+  }else {
     navigate(`/disaster-learning-modules/${module.id}`);
   }
 };
@@ -162,27 +164,17 @@ const ModuleCard = ({ module, userProgress = {} }) => {
 
         {/* Action Button */}
         <Button
-          variant={isCompleted ? "outline" : "default"}
+          variant="default"
           fullWidth
           onClick={handleModuleClick}
           className="group-hover:shadow-soft transition-smooth"
         >
-          {isCompleted ? (
-            <>
-              <Icon name="RotateCcw" size={16} className="mr-2" />
-              Review Module
-            </>
-          ) : progress > 0 ? (
-            <>
-              <Icon name="Play" size={16} className="mr-2" />
-              Continue Learning
-            </>
-          ) : (
+          
             <>
               <Icon name="BookOpen" size={16} className="mr-2" />
               Start Learning
             </>
-          )}
+          
         </Button>
       </div>
     </div>

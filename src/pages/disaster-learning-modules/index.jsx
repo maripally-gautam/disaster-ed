@@ -109,12 +109,12 @@ const DisasterLearningModules = () => {
 
   // Mock user progress data
   const userProgress = {
-    'earthquake-safety': { percentage: 75, completed: false, lastAccessed: '2025-01-15' },
-    'flood-preparedness': { percentage: 100, completed: true, lastAccessed: '2025-01-10' },
-    'fire-safety': { percentage: 30, completed: false, lastAccessed: '2025-01-16' },
+    'earthquake-safety': { percentage: 0, completed: false, lastAccessed: null },
+    'flood-preparedness': { percentage: 0, completed: false, lastAccessed: null },
+    'fire-safety': { percentage: 0, completed: false, lastAccessed: null },
     'cyclone-awareness': { percentage: 0, completed: false, lastAccessed: null },
-    'first-aid-basics': { percentage: 45, completed: false, lastAccessed: '2025-01-14' },
-    'emergency-communication': { percentage: 100, completed: true, lastAccessed: '2025-01-12' }
+    'first-aid-basics': { percentage: 0, completed: false, lastAccessed: null },
+    'emergency-communication': { percentage: 0, completed: false, lastAccessed: null }
   };
 
   // Mock user stats for gamification

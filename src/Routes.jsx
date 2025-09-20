@@ -7,6 +7,10 @@ import AdminDashboard from './pages/admin-dashboard';
 import LoginPage from './pages/login';
 import DisasterLearningModules from './pages/disaster-learning-modules';
 import FireSafety from './pages/disaster-learning-modules/components/fire-safety';
+import EarthquakeDrill from './pages/disaster-learning-modules/components/earthquake-safety';
+import EarthquakeCarSafety from './pages/disaster-learning-modules/components/EarthquakeCarSafety';
+import EarthquakeSafetyWheelchairUsers from './pages/disaster-learning-modules/components/EarthquakeWheelchairSafety';
+import EarthquakeSafetySteps from './pages/disaster-learning-modules/components/EarthquakeHelpFriends';
 import FireSafetyTraining from './pages/disaster-learning-modules/components/fire-safety-training';
 import EmergencyPanicExample from './pages/disaster-learning-modules/components/EmergencyTraining';
 import UsingaFireBlanket from './pages/disaster-learning-modules/components/FireBlanketTraining';
@@ -27,7 +31,11 @@ const Routes = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/disaster-learning-modules" element={<DisasterLearningModules />} />
         <Route path="/disaster-learning-modules/fire-safety" element={<FireSafety />} />
+        <Route path="/disaster-learning-modules/earthquake-safety" element={<EarthquakeDrill />} />
   <Route path="/disaster-learning-modules/fire-safety-training" element={<FireSafetyTraining />} />
+  <Route path="/disaster-learning-modules/EarthquakeCarSafety" element={<EarthquakeCarSafety />} />
+  <Route path="/disaster-learning-modules/EarthquakeWheelchairSafety" element={<EarthquakeSafetyWheelchairUsers />} />
+  <Route path="/disaster-learning-modules/EarthquakeHelpFriends" element={<EarthquakeSafetySteps />} />
   <Route path="/disaster-learning-modules/EmergencyTraining" element={<EmergencyPanicExample />} />
   <Route path="/disaster-learning-modules/FireBlanketTraining" element={<UsingaFireBlanket />} />
   <Route path="/disaster-learning-modules/FireSafetyDosDonts" element={<FireSafetyDosandDonts />} />
