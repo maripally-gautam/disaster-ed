@@ -91,19 +91,6 @@ const DisasterLearningModules = () => {
       enrolledCount: 21560,
       rating: 4.9,
       category: 'first-aid'
-    },
-    {
-      id: 'emergency-communication',
-      title: 'Emergency Communication Systems',
-      description: `Master emergency communication protocols and technologies. Learn about disaster communication networks, amateur radio basics, and digital communication tools. Covers family communication plans and community alert systems.`,
-      image: 'https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg',
-      icon: 'Radio',
-      difficulty: 'Intermediate',
-      estimatedTime: '30 min',
-      lessonsCount: 5,
-      enrolledCount: 7890,
-      rating: 4.5,
-      category: 'communication'
     }
   ];
 
@@ -114,7 +101,6 @@ const DisasterLearningModules = () => {
     'fire-safety': { percentage: 0, completed: false, lastAccessed: null },
     'cyclone-awareness': { percentage: 0, completed: false, lastAccessed: null },
     'first-aid-basics': { percentage: 0, completed: false, lastAccessed: null },
-    'emergency-communication': { percentage: 0, completed: false, lastAccessed: null }
   };
 
   // Mock user stats for gamification
