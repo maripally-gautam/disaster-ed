@@ -11,6 +11,7 @@ import EarthquakeDrill from './pages/disaster-learning-modules/components/earthq
 import EarthquakeCarSafety from './pages/disaster-learning-modules/components/EarthquakeCarSafety';
 import EarthquakeSafetyWheelchairUsers from './pages/disaster-learning-modules/components/EarthquakeWheelchairSafety';
 import EarthquakeSafetySteps from './pages/disaster-learning-modules/components/EarthquakeHelpFriends';
+import EarthquakeDosandDonts from './pages/disaster-learning-modules/components/EarthquakeDosDonts';
 import FireSafetyTraining from './pages/disaster-learning-modules/components/fire-safety-training';
 import EmergencyPanicExample from './pages/disaster-learning-modules/components/EmergencyTraining';
 import UsingaFireBlanket from './pages/disaster-learning-modules/components/FireBlanketTraining';
@@ -36,6 +37,7 @@ const Routes = () => {
   <Route path="/disaster-learning-modules/EarthquakeCarSafety" element={<EarthquakeCarSafety />} />
   <Route path="/disaster-learning-modules/EarthquakeWheelchairSafety" element={<EarthquakeSafetyWheelchairUsers />} />
   <Route path="/disaster-learning-modules/EarthquakeHelpFriends" element={<EarthquakeSafetySteps />} />
+  <Route path="/disaster-learning-modules/EarthquakeDosDonts" element={<EarthquakeDosandDonts />} />
   <Route path="/disaster-learning-modules/EmergencyTraining" element={<EmergencyPanicExample />} />
   <Route path="/disaster-learning-modules/FireBlanketTraining" element={<UsingaFireBlanket />} />
   <Route path="/disaster-learning-modules/FireSafetyDosDonts" element={<FireSafetyDosandDonts />} />

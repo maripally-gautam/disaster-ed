@@ -13,7 +13,7 @@ const EarthquakeHelpFriends = () => {
   };
 
   const handleNext = () => {
-    navigate('/disaster-learning-modules/next-earthquake-module');
+    navigate('/disaster-learning-modules/EarthquakeDosDonts');
   };
 
   return (
