@@ -9,6 +9,8 @@ import DisasterLearningModules from './pages/disaster-learning-modules';
 import FireSafety from './pages/disaster-learning-modules/components/fire-safety';
 import FireSafetyTraining from './pages/disaster-learning-modules/components/fire-safety-training';
 import EmergencyPanicExample from './pages/disaster-learning-modules/components/EmergencyTraining';
+import UsingaFireBlanket from './pages/disaster-learning-modules/components/FireBlanketTraining';
+import FireSafetyDosandDonts from './pages/disaster-learning-modules/components/FireSafetyDosDonts';
 import PreparednessAssessment from './pages/preparedness-assessment';
 import VirtualEmergencyDrills from './pages/virtual-emergency-drills';
 import RealTimeAlerts from './pages/real-time-alerts';
@@ -27,6 +29,8 @@ const Routes = () => {
         <Route path="/disaster-learning-modules/fire-safety" element={<FireSafety />} />
   <Route path="/disaster-learning-modules/fire-safety-training" element={<FireSafetyTraining />} />
   <Route path="/disaster-learning-modules/EmergencyTraining" element={<EmergencyPanicExample />} />
+  <Route path="/disaster-learning-modules/FireBlanketTraining" element={<UsingaFireBlanket />} />
+  <Route path="/disaster-learning-modules/FireSafetyDosDonts" element={<FireSafetyDosandDonts />} />
         <Route path="/preparedness-assessment" element={<PreparednessAssessment />} />
         <Route path="/virtual-emergency-drills" element={<VirtualEmergencyDrills />} />
         <Route path="/real-time-alerts" element={<RealTimeAlerts />} />

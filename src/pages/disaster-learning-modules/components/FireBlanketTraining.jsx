@@ -1,11 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const EmergencyTraining = () => {
+const FireBlanketTraining = () => {
   const navigate = useNavigate();
   const handleNext = () => {
-    // Update this path to the proper next module/page as needed
-    navigate('/disaster-learning-modules/FireBlanketTraining');
+    // Update this path as needed for the next step in your module
+    navigate('/disaster-learning-modules/FireSafetyDosDonts');
   };
 
   return (
@@ -22,8 +22,8 @@ const EmergencyTraining = () => {
     >
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image3.png"
-          alt="Emergency Panic Example"
+          src="/assets/images/image4.png"
+          alt="Using a Fire Blanket"
           style={{
             width: '100%',
             maxWidth: 500,
@@ -34,14 +34,14 @@ const EmergencyTraining = () => {
           }}
         />
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
-          During an Emergency <span role="img" aria-label="alert">🚨</span>
+          How to Use a Fire Blanket <span role="img" aria-label="fire">🔥</span>
         </h2>
         <div style={{ textAlign: 'left', width: '100%', maxWidth: 500 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
-            <li><strong>Don't Panic:</strong> Stay calm to help yourself and others.</li>
-            <li><strong>Avoid Crowds:</strong> Do not run with a panicked group.</li>
-            <li><strong>Look for a Safe Route:</strong> Find a clear path away from danger.</li>
-            <li><strong>Ask for Help:</strong> Shout for help if you are trapped.</li>
+            <li><strong>Get a Fire Blanket:</strong> It's a special blanket for fires.</li>
+            <li><strong>Put it on the Fire:</strong> Carefully place it over the flames to cover them completely.</li>
+            <li><strong>It Works by:</strong> Taking away the air so the fire goes out.</li>
+            <li><strong>Stay Safe:</strong> Use it only on small fires and never throw it.</li>
           </ol>
         </div>
       </div>
@@ -68,4 +68,4 @@ const EmergencyTraining = () => {
   );
 };
 
-export default EmergencyTraining;
+export default FireBlanketTraining;
