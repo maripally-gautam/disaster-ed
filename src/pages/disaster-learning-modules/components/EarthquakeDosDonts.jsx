@@ -45,7 +45,7 @@ const EarthquakeDosDonts = () => {
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image10.png"
+          src="/assets/images/image10.jpg"
           alt="Earthquake Dos and Donts"
           style={{
             width: '100%',
