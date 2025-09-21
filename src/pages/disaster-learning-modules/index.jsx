@@ -115,23 +115,6 @@ const DisasterLearningModules = () => {
     weeklyProgress: 320
   };
 
-  // Mock recent modules and bookmarks
-  const recentModules = [
-    {
-      id: 'earthquake-safety',
-      title: 'Earthquake Safety & Preparedness',
-      icon: 'Mountain',
-      progress: 75,
-      lastAccessed: '2 hours ago'
-    },
-    {
-      id: 'fire-safety',
-      title: 'Fire Safety & Prevention',
-      icon: 'Flame',
-      progress: 30,
-      lastAccessed: 'Yesterday'
-    }
-  ];
 
   const bookmarkedContent = [
     {
@@ -388,11 +371,10 @@ const DisasterLearningModules = () => {
 
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-6">
-            <GameificationPanel userStats={userStats} />
             <QuickAccessPanel 
-              recentModules={recentModules}
               bookmarkedContent={bookmarkedContent}
             />
+            <GameificationPanel userStats={userStats} />
             <ProgressIndicatorSystem userProgress={userProgress} />
           </div>
         </div>
