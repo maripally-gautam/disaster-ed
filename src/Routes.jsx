@@ -12,6 +12,11 @@ import SeekShelterfromStorm from './pages/disaster-learning-modules/components/c
 import OfficialDisasterWarnings from './pages/disaster-learning-modules/components/StormOfficialWarnings';
 import EyeofCyclone from './pages/disaster-learning-modules/components/CycloneEyeSafety';
 import UnplugElectronicsforCycloneSafety from './pages/disaster-learning-modules/components/CyclonePowerSafety';
+import BurnFirstAid from './pages/disaster-learning-modules/components/first-aid-basics';
+import CutsandBleedingFirstAid from './pages/disaster-learning-modules/components/CutsBleedingAid';
+import FracturesandBrokenBonesFirstAid from './pages/disaster-learning-modules/components/FractureAid';
+import NosebleedFirstAid from './pages/disaster-learning-modules/components/NosebleedAid';
+import CPRFirstAid from './pages/disaster-learning-modules/components/CprAid';
 import FloodAwareness from './pages/disaster-learning-modules/components/FloodAwareness';
 import FloodPreparedness from './pages/disaster-learning-modules/components/flood-preparedness';
 import FloodEvacuationSafety from './pages/disaster-learning-modules/components/FloodEvacuationSafety';
@@ -47,6 +52,11 @@ const Routes = () => {
         <Route path="/disaster-learning-modules/StormOfficialWarnings" element={<OfficialDisasterWarnings />} />
         <Route path="/disaster-learning-modules/CycloneEyeSafety" element={<EyeofCyclone />} />
         <Route path="/disaster-learning-modules/CyclonePowerSafety" element={<UnplugElectronicsforCycloneSafety />} />
+        <Route path="/disaster-learning-modules/first-aid-basics" element={<BurnFirstAid />} />
+        <Route path="/disaster-learning-modules/CutsBleedingAid" element={<CutsandBleedingFirstAid />} />
+        <Route path="/disaster-learning-modules/FractureAid" element={<FracturesandBrokenBonesFirstAid />} />
+        <Route path="/disaster-learning-modules/NosebleedAid" element={<NosebleedFirstAid />} />
+        <Route path="/disaster-learning-modules/CprAid" element={<CPRFirstAid />} />
         <Route path="/disaster-learning-modules/FloodAwareness" element={<FloodAwareness />} />
         <Route path="/disaster-learning-modules/flood-preparedness" element={<FloodPreparedness />} />
         <Route path="/disaster-learning-modules/FloodEvacuationSafety" element={<FloodEvacuationSafety />} />
