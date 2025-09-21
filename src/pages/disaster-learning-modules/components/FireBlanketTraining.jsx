@@ -3,15 +3,24 @@ import { useNavigate } from 'react-router-dom';
 
 const FireBlanketTraining = () => {
   const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/disaster-learning-modules');
+  };
+
   const handleNext = () => {
     // Update this path as needed for the next step in your module
     navigate('/disaster-learning-modules/FireSafetyDosDonts');
   };
 
+  const handlePrevious = () => {
+    navigate('/disaster-learning-modules/EmergencyTraining');
+  };
+
   return (
     <div
       style={{
-        maxWidth: 700,
+        maxWidth: 800,
         margin: '40px auto',
         background: '#fff',
         borderRadius: 16,
@@ -20,6 +29,46 @@ const FireBlanketTraining = () => {
         position: 'relative',
       }}
     >
+      <button
+      onClick={handleBack}
+      style={{
+        position: 'absolute',
+        top: 10,
+        left: 10,
+        background: '#1976d2',
+        color: '#fff',
+        border: 'none',
+        borderRadius: 8,
+        padding: '8px 20px',
+        fontSize: 16,
+        fontWeight: 600,
+        cursor: 'pointer',
+        boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
+      }}
+    >
+      &#8592; Back
+    </button>
+
+    <button
+        onClick={handlePrevious}
+        style={{
+          position: 'absolute',
+          bottom: 24,
+          left: 32,
+          background: '#1976d2',
+          color: '#fff',
+          border: 'none',
+          borderRadius: 8,
+          padding: '12px 32px',
+          fontSize: 18,
+          fontWeight: 600,
+          cursor: 'pointer',
+          boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
+        }}
+      >
+        &#8592; Previous
+      </button>
+      
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
           src="/assets/images/image4.png"

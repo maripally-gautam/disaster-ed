@@ -12,10 +12,9 @@ const EarthquakeDosDonts = () => {
     navigate('/disaster-learning-modules/EarthquakeHelpFriends');
   };
 
-  
-
   return (
-    <div style={{
+  <div 
+    style={{
       maxWidth: 1000,
       margin: '40px auto',
       background: '#fff',
