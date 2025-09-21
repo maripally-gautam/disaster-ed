@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const FloodPreparedness = () => {
+const StormShelterSafety = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -9,12 +9,12 @@ const FloodPreparedness = () => {
   };
 
   const handleNext = () => {
-    navigate('/disaster-learning-modules/FloodEvacuationSafety'); // Update this path as needed
+    navigate('/disaster-learning-modules/StormOfficialWarnings'); // Update as needed
   };
 
   return (
     <div style={{
-      maxWidth: 1000,
+      maxWidth: 800,
       margin: '40px auto',
       background: '#fff',
       borderRadius: 16,
@@ -43,8 +43,8 @@ const FloodPreparedness = () => {
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image11.png"
-          alt="Flood Preparedness"
+          src="/assets/images/image16.png"
+          alt="Seek Shelter from Storm"
           style={{
             width: '100%',
             maxWidth: 500,
@@ -55,16 +55,14 @@ const FloodPreparedness = () => {
           }}
         />
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#388e3c' }}>
-          Flood Preparedness
+          Stay Indoors and Seek Shelter 🏠
         </h2>
         <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
-            <li><strong>Stay Informed:</strong> Monitor local news and official alerts for timely flood warnings and evacuation notices.</li>
-            <li><strong>Know Evacuation Routes:</strong> Plan and practice safe evacuation paths from your home and workplace.</li>
-            <li><strong>Prepare Emergency Bags:</strong> Pack essentials in a waterproof "go-bag": flashlight, food, medicines, documents, and water.</li>
-            <li><strong>Secure Your Home:</strong> Move valuables to higher ground and unplug electronics.</li>
-            <li><strong>Family Communication Plan:</strong> Establish meeting spots and contacts for family members if separated.</li>
-            <li><strong>Avoid Floodwaters:</strong> Never walk or drive through floods – "Turn Around, Don't Drown!"</li>
+            <li><strong>Move to the Safest Room:</strong> Go to an interior room, like a hallway, closet, or bathroom, away from exterior walls, windows, and glass doors. These can shatter and cause serious injury.</li>
+            <li><strong>Create a Protective Barrier:</strong> If possible, get under a sturdy table or desk and cover yourself with a mattress, blankets, or rugs for protection against falling debris.</li>
+            <li><strong>Avoid Tall Buildings and Mobile Homes:</strong> If you are in a mobile home or a tall building, evacuate to a safer, more solid structure. These are more vulnerable to strong winds.</li>
+            <li><strong>Wait for the All-Clear:</strong> Do not leave your shelter until official warnings confirm the storm has passed.</li>
           </ol>
         </div>
       </div>
@@ -91,4 +89,4 @@ const FloodPreparedness = () => {
   );
 };
 
-export default FloodPreparedness;
+export default StormShelterSafety;

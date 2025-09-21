@@ -194,7 +194,7 @@ const GameificationPanel = ({ userStats = {} }) => {
           </div>
           <div className="flex items-center space-x-2">
             <span className="text-sm text-muted-foreground">#47 in your school</span>
-            <Icon name="ChevronRight" size={14} className="text-muted-foreground" />
+            {/* <Icon name="ChevronRight" size={14} className="text-muted-foreground" /> */}
           </div>
         </div>
       </div>

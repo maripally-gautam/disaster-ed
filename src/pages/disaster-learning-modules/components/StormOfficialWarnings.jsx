@@ -1,20 +1,24 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const FloodPreparedness = () => {
+const StormOfficialWarnings = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate('/disaster-learning-modules');
   };
 
+  const handlePrevious = () => {
+    navigate('/disaster-learning-modules/cyclone-awareness'); // Link to your previous file here
+  };
+
   const handleNext = () => {
-    navigate('/disaster-learning-modules/FloodEvacuationSafety'); // Update this path as needed
+    navigate('/disaster-learning-modules/CycloneEyeSafety'); // Update as needed for your next file
   };
 
   return (
     <div style={{
-      maxWidth: 1000,
+      maxWidth: 800,
       margin: '40px auto',
       background: '#fff',
       borderRadius: 16,
@@ -43,8 +47,8 @@ const FloodPreparedness = () => {
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image11.png"
-          alt="Flood Preparedness"
+          src="/assets/images/image17.png"
+          alt="Official Disaster Warnings"
           style={{
             width: '100%',
             maxWidth: 500,
@@ -55,19 +59,35 @@ const FloodPreparedness = () => {
           }}
         />
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#388e3c' }}>
-          Flood Preparedness
+          Listen to Official Warnings 📻
         </h2>
         <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
-            <li><strong>Stay Informed:</strong> Monitor local news and official alerts for timely flood warnings and evacuation notices.</li>
-            <li><strong>Know Evacuation Routes:</strong> Plan and practice safe evacuation paths from your home and workplace.</li>
-            <li><strong>Prepare Emergency Bags:</strong> Pack essentials in a waterproof "go-bag": flashlight, food, medicines, documents, and water.</li>
-            <li><strong>Secure Your Home:</strong> Move valuables to higher ground and unplug electronics.</li>
-            <li><strong>Family Communication Plan:</strong> Establish meeting spots and contacts for family members if separated.</li>
-            <li><strong>Avoid Floodwaters:</strong> Never walk or drive through floods – "Turn Around, Don't Drown!"</li>
+            <li><strong>Use a Battery-Powered Radio:</strong> Power outages are common. A battery-operated or hand-crank radio is your lifeline for receiving official updates from emergency services.</li>
+            <li><strong>Follow Evacuation Orders:</strong> If authorities issue an evacuation order, leave immediately. They have determined that your location is unsafe, and the risk of staying is too high.</li>
+            <li><strong>Ignore Rumors:</strong> In a disaster, false information spreads quickly. Only trust information from official sources like government agencies and recognized news outlets.</li>
           </ol>
         </div>
       </div>
+      <button
+        onClick={handlePrevious}
+        style={{
+          position: 'absolute',
+          bottom: 24,
+          left: 32,
+          background: '#1976d2',
+          color: '#fff',
+          border: 'none',
+          borderRadius: 8,
+          padding: '12px 32px',
+          fontSize: 18,
+          fontWeight: 600,
+          cursor: 'pointer',
+          boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
+        }}
+      >
+        &#8592; Previous
+      </button>
       <button
         onClick={handleNext}
         style={{
@@ -91,4 +111,4 @@ const FloodPreparedness = () => {
   );
 };
 
-export default FloodPreparedness;
+export default StormOfficialWarnings;

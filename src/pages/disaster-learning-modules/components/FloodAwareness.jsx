@@ -1,20 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const FloodPreparedness = () => {
+const FloodAwareness = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
     navigate('/disaster-learning-modules');
   };
 
-  const handleNext = () => {
-    navigate('/disaster-learning-modules/FloodEvacuationSafety'); // Update this path as needed
+  const handlePrevious = () => {
+    navigate('/disaster-learning-modules/CyclonePowerSafety'); // Update path if needed
   };
 
   return (
     <div style={{
-      maxWidth: 1000,
+      maxWidth: 900,
       margin: '40px auto',
       background: '#fff',
       borderRadius: 16,
@@ -43,37 +43,39 @@ const FloodPreparedness = () => {
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image11.png"
-          alt="Flood Preparedness"
+          src="/assets/images/image20.png"
+          alt="Flood Awareness"
           style={{
             width: '100%',
-            maxWidth: 500,
+            maxWidth: 600,
             height: 'auto',
             borderRadius: 12,
             marginBottom: 32,
             boxShadow: '0 2px 12px rgba(0,0,0,0.10)'
           }}
         />
-        <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#388e3c' }}>
-          Flood Preparedness
+        <h2 style={{
+          fontSize: 32,
+          fontWeight: 700,
+          marginBottom: 24,
+          color: '#1976d2'
+        }}>
+          Be Aware of Flooding 🌊
         </h2>
-        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 900 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
-            <li><strong>Stay Informed:</strong> Monitor local news and official alerts for timely flood warnings and evacuation notices.</li>
-            <li><strong>Know Evacuation Routes:</strong> Plan and practice safe evacuation paths from your home and workplace.</li>
-            <li><strong>Prepare Emergency Bags:</strong> Pack essentials in a waterproof "go-bag": flashlight, food, medicines, documents, and water.</li>
-            <li><strong>Secure Your Home:</strong> Move valuables to higher ground and unplug electronics.</li>
-            <li><strong>Family Communication Plan:</strong> Establish meeting spots and contacts for family members if separated.</li>
-            <li><strong>Avoid Floodwaters:</strong> Never walk or drive through floods – "Turn Around, Don't Drown!"</li>
+            <li><strong>Move to Higher Ground:</strong> If you live in a low-lying or flood-prone area, move to the highest floor of your home or to a designated shelter on higher ground.</li>
+            <li><strong>Do Not Enter Floodwater:</strong> Never walk, swim, or drive through floodwater. Just six inches of moving water can knock you off your feet, and two feet can sweep a car away.</li>
+            <li><strong>Watch for Hidden Dangers:</strong> Floodwater can be contaminated with sewage and chemicals. It can also hide dangerous items like debris, broken glass, and downed power lines. Stay out of it at all costs.</li>
           </ol>
         </div>
       </div>
       <button
-        onClick={handleNext}
+        onClick={handlePrevious}
         style={{
           position: 'absolute',
           bottom: 24,
-          right: 32,
+          left: 32,
           background: '#1976d2',
           color: '#fff',
           border: 'none',
@@ -85,10 +87,10 @@ const FloodPreparedness = () => {
           boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
         }}
       >
-        Next
+        &#8592; Previous
       </button>
     </div>
   );
 };
 
-export default FloodPreparedness;
+export default FloodAwareness;
