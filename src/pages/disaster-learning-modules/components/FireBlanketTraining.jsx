@@ -36,7 +36,7 @@ const FireBlanketTraining = () => {
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
           How to Use a Fire Blanket <span role="img" aria-label="fire">🔥</span>
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 500 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 500 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Get a Fire Blanket:</strong> It's a special blanket for fires.</li>
             <li><strong>Put it on the Fire:</strong> Carefully place it over the flames to cover them completely.</li>

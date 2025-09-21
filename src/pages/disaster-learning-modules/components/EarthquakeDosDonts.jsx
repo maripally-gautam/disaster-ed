@@ -16,7 +16,7 @@ const EarthquakeDosDonts = () => {
 
   return (
     <div style={{
-      maxWidth: 800,
+      maxWidth: 1000,
       margin: '40px auto',
       background: '#fff',
       borderRadius: 16,
@@ -68,9 +68,9 @@ const EarthquakeDosDonts = () => {
           display: 'flex',
           justifyContent: 'space-between',
           width: '100%',
-          maxWidth: 500,
+          maxWidth: 1000,
         }}>
-          <div style={{ textAlign: 'left', width: '47%' }}>
+          <div style={{ textAlign: 'justify', width: '47%' }}>
             <h3 style={{ color: "#388e3c", marginBottom: 16 }}>Do's</h3>
             <ul style={{ fontSize: 18, lineHeight: 1.7, paddingLeft: 18, marginBottom: 0 }}>
               <li><strong>Drop, Cover, and Hold On:</strong> The most important rule. Drop to the ground, get under a sturdy table or desk, and hold on until the shaking stops.</li>
@@ -82,7 +82,7 @@ const EarthquakeDosDonts = () => {
               <li><strong>Use a whistle or shout:</strong> If you are trapped, try to signal for help.</li>
             </ul>
           </div>
-          <div style={{ textAlign: 'left', width: '47%' }}>
+          <div style={{ textAlign: 'justify', width: '47%' }}>
             <h3 style={{ color: "#d32f2f", marginBottom: 16 }}>Don'ts</h3>
             <ul style={{ fontSize: 18, lineHeight: 1.7, paddingLeft: 18, marginBottom: 0 }}>
               <li><strong>Don't run outside:</strong> You are more likely to be injured by falling debris, glass, or other objects as you try to exit a building.</li>

@@ -66,7 +66,7 @@ const EarthquakeCarSafety = () => {
         }}>
           Earthquake Safety in Cars
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 1000 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Your Car is a Shelter:</strong> Think of your car as a temporary shelter. Staying inside can protect you from falling debris, like glass, signs, and light poles.</li>
             <li><strong>Find Open Space:</strong> Your primary goal is to get to an open area. This means pulling over to the side of the road and stopping away from buildings, bridges, overpasses, and trees.</li>

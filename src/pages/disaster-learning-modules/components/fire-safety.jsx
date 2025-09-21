@@ -27,7 +27,7 @@ const FireSafety = () => {
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
           Emergency Evacuation Protocol <span role="img" aria-label="alert">🚨</span>
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 500 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 500 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Stay Calm:</strong> Don't panic.</li>
             <li><strong>Go to the Nearest Exit:</strong> Find the closest exit.</li>

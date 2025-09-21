@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const EarthquakeSafety = () => {
+const FloodPreparedness = () => {
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -9,7 +9,7 @@ const EarthquakeSafety = () => {
   };
 
   const handleNext = () => {
-    navigate('/disaster-learning-modules/EarthquakeCarSafety'); // Update this path as needed
+    navigate('/disaster-learning-modules/FloodSafetyNext'); // Update this path as needed
   };
 
   return (
@@ -43,19 +43,28 @@ const EarthquakeSafety = () => {
       </button>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <img
-          src="/assets/images/image6.png"
-          alt="Earthquake Drill"
-          style={{ width: '100%', maxWidth: 500, height: 'auto', borderRadius: 12, marginBottom: 32, boxShadow: '0 2px 12px rgba(0,0,0,0.10)' }}
+          src="/assets/images/image11.png"
+          alt="Flood Preparedness"
+          style={{
+            width: '100%',
+            maxWidth: 500,
+            height: 'auto',
+            borderRadius: 12,
+            marginBottom: 32,
+            boxShadow: '0 2px 12px rgba(0,0,0,0.10)'
+          }}
         />
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#388e3c' }}>
-          Earthquake Drill
+          Flood Preparedness
         </h2>
         <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
-            <li><strong>Drop:</strong> They have dropped to the floor, getting low to the ground.</li>
-            <li><strong>Cover:</strong> They are taking cover under sturdy desks or tables to protect themselves from falling objects.</li>
-            <li><strong>Hold On:</strong> They are holding onto the legs of the furniture to stay protected even if the furniture moves.</li>
-            <li><strong>Safety First:</strong> This drill teaches students how to stay safe during an earthquake.</li>
+            <li><strong>Stay Informed:</strong> Monitor local news and official alerts for timely flood warnings and evacuation notices.</li>
+            <li><strong>Know Evacuation Routes:</strong> Plan and practice safe evacuation paths from your home and workplace.</li>
+            <li><strong>Prepare Emergency Bags:</strong> Pack essentials in a waterproof "go-bag": flashlight, food, medicines, documents, and water.</li>
+            <li><strong>Secure Your Home:</strong> Move valuables to higher ground and unplug electronics.</li>
+            <li><strong>Family Communication Plan:</strong> Establish meeting spots and contacts for family members if separated.</li>
+            <li><strong>Avoid Floodwaters:</strong> Never walk or drive through floods – "Turn Around, Don't Drown!"</li>
           </ol>
         </div>
       </div>
@@ -82,4 +91,4 @@ const EarthquakeSafety = () => {
   );
 };
 
-export default EarthquakeSafety;
+export default FloodPreparedness;

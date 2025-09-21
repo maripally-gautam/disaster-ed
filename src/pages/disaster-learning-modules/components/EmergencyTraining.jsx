@@ -36,7 +36,7 @@ const EmergencyTraining = () => {
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
           During an Emergency <span role="img" aria-label="alert">🚨</span>
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 500 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 500 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Don't Panic:</strong> Stay calm to help yourself and others.</li>
             <li><strong>Avoid Crowds:</strong> Do not run with a panicked group.</li>

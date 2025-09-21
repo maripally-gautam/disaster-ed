@@ -66,7 +66,7 @@ const EarthquakeWheelchairSafety = () => {
         }}>
           Earthquake Safety for Wheelchair Users
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 1000 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Lock Your Wheels:</strong> If you use a wheelchair, lock your wheels immediately to prevent it from moving during the shaking.</li>
             <li><strong>Stay in Your Chair or Bed:</strong> If you are in a wheelchair, bed, or recliner, it is often safest to stay there. Trying to transfer or move during the shaking could be more dangerous.</li>

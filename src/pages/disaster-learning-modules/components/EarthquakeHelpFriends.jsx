@@ -66,7 +66,7 @@ const EarthquakeHelpFriends = () => {
         }}>
           Earthquake: Helping Others Safely
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 1000 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 1000 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Stay Low and Crawl:</strong> If you need to move to reach someone, stay low to the ground and crawl to avoid falling debris.</li>
             <li><strong>Avoid Running:</strong> Don't run blindly; assess the safest path to your friend.</li>

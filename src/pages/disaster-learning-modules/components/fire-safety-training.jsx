@@ -27,7 +27,7 @@ const FireSafetyTraining = () => {
         <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 24, color: '#d32f2f' }}>
           Fire Safety Training <span role="img" aria-label="fire">🔥</span>
         </h2>
-        <div style={{ textAlign: 'left', width: '100%', maxWidth: 500 }}>
+        <div style={{ textAlign: 'justify', width: '100%', maxWidth: 500 }}>
           <ol style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 24 }}>
             <li><strong>Practice with a Fire Extinguisher:</strong> Learn to use it correctly.</li>
             <li><strong>Remember 'PASS':</strong> It's the simple way to put out a small fire.</li>

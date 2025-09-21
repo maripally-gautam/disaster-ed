@@ -3,7 +3,7 @@ import React from 'react';
 const FireSafetyDosDonts = () => (
   <div
     style={{
-      maxWidth: 700,
+      maxWidth: 800,
       margin: '40px auto',
       background: '#fff',
       borderRadius: 16,
@@ -28,8 +28,8 @@ const FireSafetyDosDonts = () => (
       <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 30, color: '#d32f2f' }}>
         Fire Safety: Do's & Don'ts
       </h2>
-      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 600 }}>
-        <div style={{ textAlign: 'left', width: '47%' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 700 }}>
+        <div style={{ textAlign: 'justify', width: '47%' }}>
           <h3 style={{ color: "#388e3c", marginBottom: 16 }}>DO'S</h3>
           <ul style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 18, marginBottom: 0 }}>
             <li>Activate the alarm.</li>
@@ -39,7 +39,7 @@ const FireSafetyDosDonts = () => (
             <li>Go to the meeting point.</li>
           </ul>
         </div>
-        <div style={{ textAlign: 'left', width: '47%' }}>
+        <div style={{ textAlign: 'justify', width: '47%' }}>
           <h3 style={{ color: "#d32f2f", marginBottom: 16 }}>DON'TS</h3>
           <ul style={{ fontSize: 20, lineHeight: 1.7, paddingLeft: 18, marginBottom: 0 }}>
             <li>Don't use the elevator.</li>

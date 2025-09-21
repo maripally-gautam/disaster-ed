@@ -8,6 +8,7 @@ import LoginPage from './pages/login';
 import DisasterLearningModules from './pages/disaster-learning-modules';
 import FireSafety from './pages/disaster-learning-modules/components/fire-safety';
 import EarthquakeDrill from './pages/disaster-learning-modules/components/earthquake-safety';
+import FloodPreparedness from './pages/disaster-learning-modules/components/flood-preparedness';
 import EarthquakeCarSafety from './pages/disaster-learning-modules/components/EarthquakeCarSafety';
 import EarthquakeSafetyWheelchairUsers from './pages/disaster-learning-modules/components/EarthquakeWheelchairSafety';
 import EarthquakeSafetySteps from './pages/disaster-learning-modules/components/EarthquakeHelpFriends';
@@ -33,6 +34,7 @@ const Routes = () => {
         <Route path="/disaster-learning-modules" element={<DisasterLearningModules />} />
         <Route path="/disaster-learning-modules/fire-safety" element={<FireSafety />} />
         <Route path="/disaster-learning-modules/earthquake-safety" element={<EarthquakeDrill />} />
+        <Route path="/disaster-learning-modules/flood-preparedness" element={<FloodPreparedness />} />
   <Route path="/disaster-learning-modules/fire-safety-training" element={<FireSafetyTraining />} />
   <Route path="/disaster-learning-modules/EarthquakeCarSafety" element={<EarthquakeCarSafety />} />
   <Route path="/disaster-learning-modules/EarthquakeWheelchairSafety" element={<EarthquakeSafetyWheelchairUsers />} />
