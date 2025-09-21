@@ -359,6 +359,9 @@ const DisasterLearningModules = () => {
                     </div>
                   )}
                 </div>
+                <div className="mt-8">
+                  <ProgressIndicatorSystem userProgress={userProgress} horizontal />
+                  </div>
               </>
             ) : (
               /* Learning Pathway View */
@@ -371,11 +374,8 @@ const DisasterLearningModules = () => {
 
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-6">
-            <QuickAccessPanel 
-              bookmarkedContent={bookmarkedContent}
-            />
+            <QuickAccessPanel bookmarkedContent={bookmarkedContent} />
             <GameificationPanel userStats={userStats} />
-            <ProgressIndicatorSystem userProgress={userProgress} />
           </div>
         </div>
       </div>
