@@ -136,9 +136,9 @@ const RealTimeAlerts = () => {
       if (filters?.status === 'active' && alert?.acknowledged) return false;
       if (filters?.status === 'acknowledged' && !alert?.acknowledged) return false;
     }
-    if (filters?.search && !alert?.title?.toLowerCase()?.includes(filters?.search?.toLowerCase()) && 
-        !alert?.description?.toLowerCase()?.includes(filters?.search?.toLowerCase())) return false;
-    
+    if (filters?.search && !alert?.title?.toLowerCase()?.includes(filters?.search?.toLowerCase()) &&
+      !alert?.description?.toLowerCase()?.includes(filters?.search?.toLowerCase())) return false;
+
     return true;
   });
 
@@ -154,9 +154,9 @@ const RealTimeAlerts = () => {
   const latestAlert = alerts?.length > 0 ? {
     title: alerts?.[0]?.title,
     preview: alerts?.[0]?.description?.substring(0, 100) + '...',
-    time: new Date(alerts[0].timestamp)?.toLocaleTimeString('en-IN', { 
-      hour: '2-digit', 
-      minute: '2-digit' 
+    time: new Date(alerts[0].timestamp)?.toLocaleTimeString('en-IN', {
+      hour: '2-digit',
+      minute: '2-digit'
     })
   } : null;
 
@@ -179,7 +179,7 @@ const RealTimeAlerts = () => {
   };
 
   const handleAcknowledgeAlert = (alertId) => {
-    setAlerts(prev => prev?.map(alert => 
+    setAlerts(prev => prev?.map(alert =>
       alert?.id === alertId ? { ...alert, acknowledged: true } : alert
     ));
   };
@@ -230,10 +230,10 @@ const RealTimeAlerts = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header 
-        userRole={currentUser?.role} 
+      <Header
+        userRole={currentUser?.role}
         alertCount={activeAlertCount}
-        onMenuToggle={() => {}}
+        onMenuToggle={() => { }}
       />
       <EmergencyAlertIndicator
         alertCount={activeAlertCount}
@@ -249,7 +249,7 @@ const RealTimeAlerts = () => {
               Stay informed with live disaster notifications and emergency updates
             </p>
           </div>
-          
+
           <div className="flex items-center gap-3">
             {currentUser?.role === 'admin' && (
               <Button
@@ -261,7 +261,7 @@ const RealTimeAlerts = () => {
                 Broadcast Alert
               </Button>
             )}
-            
+
             <Button
               variant="outline"
               onClick={() => navigate('/disaster-learning-modules')}
@@ -346,6 +346,36 @@ const RealTimeAlerts = () => {
 
           {/* Right Column - Location Risk Map */}
           <div className="space-y-6">
+            {/* Emergency Contacts */}
+            <div className="bg-card border border-border rounded-lg p-4 shadow-soft">
+              <h3 className="font-semibold text-card-foreground mb-4 flex items-center">
+                <Icon name="Phone" size={18} className="mr-2" />
+                Emergency Contacts
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center justify-between">
+                  <span>National Emergency</span>
+                  <a href="tel:112" className="text-primary font-medium">112</a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Fire Department</span>
+                  <a href="tel:101" className="text-primary font-medium">101</a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Police</span>
+                  <a href="tel:100" className="text-primary font-medium">100</a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Medical Emergency</span>
+                  <a href="tel:108" className="text-primary font-medium">108</a>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span>Disaster Helpline</span>
+                  <a href="tel:1078" className="text-primary font-medium">1078</a>
+                </div>
+              </div>
+            </div>
+
             <LocationRiskMap
               userLocation={userLocation}
               riskData={{}}
@@ -386,36 +416,6 @@ const RealTimeAlerts = () => {
                 >
                   View Dashboard
                 </Button>
-              </div>
-            </div>
-
-            {/* Emergency Contacts */}
-            <div className="bg-card border border-border rounded-lg p-4 shadow-soft">
-              <h3 className="font-semibold text-card-foreground mb-4 flex items-center">
-                <Icon name="Phone" size={18} className="mr-2" />
-                Emergency Contacts
-              </h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center justify-between">
-                  <span>National Emergency</span>
-                  <a href="tel:112" className="text-primary font-medium">112</a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Fire Department</span>
-                  <a href="tel:101" className="text-primary font-medium">101</a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Police</span>
-                  <a href="tel:100" className="text-primary font-medium">100</a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Medical Emergency</span>
-                  <a href="tel:108" className="text-primary font-medium">108</a>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span>Disaster Helpline</span>
-                  <a href="tel:1078" className="text-primary font-medium">1078</a>
-                </div>
               </div>
             </div>
           </div>

@@ -90,7 +90,7 @@ const LocationRiskMap = ({ userLocation, riskData, onLocationChange }) => {
   };
 
   return (
-    <div className="bg-card border border-border rounded-lg shadow-soft">
+    <div className="bg-card border border-border rounded-lg shadow-soft w-full max-w-xl mx-auto">
       <div className="p-4 border-b border-border">
         <h3 className="font-semibold text-card-foreground flex items-center">
           <Icon name="MapPin" size={18} className="mr-2" />
@@ -104,26 +104,29 @@ const LocationRiskMap = ({ userLocation, riskData, onLocationChange }) => {
             Select Location
           </label>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {locations?.map(location => (
-              <Button
-                key={location?.id}
-                variant={selectedLocation === location?.id ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => handleLocationSelect(location?.id)}
-                className="text-left h-auto p-3"
-              >
-                <div>
-                  <div className="font-medium text-sm">{location?.name}</div>
-                  <div className="text-xs opacity-75">{location?.state}</div>
-                  {location?.activeAlerts > 0 && (
-                    <div className="flex items-center mt-1">
-                      <Icon name="AlertTriangle" size={12} className="mr-1 text-error" />
-                      <span className="text-xs text-error">{location?.activeAlerts} alerts</span>
-                    </div>
-                  )}
-                </div>
-              </Button>
-            ))}
+            <div className="flex flex-wrap gap-2 w-full">
+              {locations?.map(location => (
+                <Button
+                  key={location?.id}
+                  variant={selectedLocation === location?.id ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => handleLocationSelect(location?.id)}
+                  className={`text-left h-auto p-4 min-h-[80px] rounded-xl font-semibold transition-all duration-200 ${selectedLocation === location?.id ? 'shadow-lg scale-105' : ''}`}
+                  style={{ minWidth: '140px', flex: '1 1 140px', maxWidth: '220px' }}
+                >
+                  <div>
+                    <div className="font-medium text-base">{location?.name}</div>
+                    <div className="text-sm opacity-75">{location?.state}</div>
+                    {location?.activeAlerts > 0 && (
+                      <div className="flex items-center mt-1">
+                        <Icon name="AlertTriangle" size={12} className="mr-1 text-error" />
+                        <span className="text-xs text-error">{location?.activeAlerts} alerts</span>
+                      </div>
+                    )}
+                  </div>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -166,13 +169,14 @@ const LocationRiskMap = ({ userLocation, riskData, onLocationChange }) => {
             {Object.entries(currentLocation?.risks)?.map(([disaster, risk]) => (
               <div
                 key={disaster}
-                className="flex items-center justify-between p-3 border border-border rounded-lg hover:bg-muted/50 transition-quick"
+                className="flex items-center justify-between p-3 border border-border rounded-lg hover:bg-muted/50 transition-quick min-w-0"
+                style={{ wordBreak: 'break-word' }}
               >
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 flex-wrap min-w-0">
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${riskLevels?.[risk]?.color}/10`}>
-                    <Icon 
-                      name={disasterIcons?.[disaster]} 
-                      size={16} 
+                    <Icon
+                      name={disasterIcons?.[disaster]}
+                      size={16}
                       className={riskLevels?.[risk]?.textColor}
                     />
                   </div>
@@ -183,9 +187,9 @@ const LocationRiskMap = ({ userLocation, riskData, onLocationChange }) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 flex-wrap min-w-0">
                   <div className={`w-3 h-3 rounded-full ${riskLevels?.[risk]?.color}`}></div>
-                  <span className={`text-sm font-medium ${riskLevels?.[risk]?.textColor}`}>
+                  <span className={`text-sm font-medium ${riskLevels?.[risk]?.textColor} whitespace-normal`}>
                     {riskLevels?.[risk]?.label}
                   </span>
                 </div>
@@ -193,26 +197,26 @@ const LocationRiskMap = ({ userLocation, riskData, onLocationChange }) => {
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Risk Legend */}
-        <div className="mt-6 pt-4 border-t border-border">
-          <h4 className="font-medium text-card-foreground mb-3">Risk Level Guide</h4>
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div className="p-3 bg-error/10 rounded-lg">
-              <div className="w-4 h-4 bg-error rounded-full mx-auto mb-2"></div>
-              <div className="text-sm font-medium text-error">High Risk</div>
-              <div className="text-xs text-muted-foreground">Immediate attention required</div>
-            </div>
-            <div className="p-3 bg-warning/10 rounded-lg">
-              <div className="w-4 h-4 bg-warning rounded-full mx-auto mb-2"></div>
-              <div className="text-sm font-medium text-warning">Medium Risk</div>
-              <div className="text-xs text-muted-foreground">Monitor conditions</div>
-            </div>
-            <div className="p-3 bg-success/10 rounded-lg">
-              <div className="w-4 h-4 bg-success rounded-full mx-auto mb-2"></div>
-              <div className="text-sm font-medium text-success">Low Risk</div>
-              <div className="text-xs text-muted-foreground">Normal conditions</div>
-            </div>
+      {/* Risk Legend */}
+      <div className="mt-6 pt-4 border-t border-border">
+        <h4 className="font-medium text-card-foreground mb-3">Risk Level Guide</h4>
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="p-3 bg-error/10 rounded-lg">
+            <div className="w-4 h-4 bg-error rounded-full mx-auto mb-2"></div>
+            <div className="text-sm font-medium text-error">High Risk</div>
+            <div className="text-xs text-muted-foreground">Immediate attention required</div>
+          </div>
+          <div className="p-3 bg-warning/10 rounded-lg">
+            <div className="w-4 h-4 bg-warning rounded-full mx-auto mb-2"></div>
+            <div className="text-sm font-medium text-warning">Medium Risk</div>
+            <div className="text-xs text-muted-foreground">Monitor conditions</div>
+          </div>
+          <div className="p-3 bg-success/10 rounded-lg">
+            <div className="w-4 h-4 bg-success rounded-full mx-auto mb-2"></div>
+            <div className="text-sm font-medium text-success">Low Risk</div>
+            <div className="text-xs text-muted-foreground">Normal conditions</div>
           </div>
         </div>
       </div>
